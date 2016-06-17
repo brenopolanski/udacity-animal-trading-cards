@@ -1,100 +1,76 @@
 /**
- * Description: Short info.
- * Version: 1.0.0
- * Last update: YYYY/MM/DD
- * Author: User Name <username@gmail.com>
- *
  * TABLE OF CONTENTS:
  *
- *  0. ELEMENT
- *    - 0.1. TYPE ELEMENT
- *    - 0.2. TYPE ELEMENT
- *  1. ELEMENT
- *    - 1.1. TYPE ELEMENT
- *    - 1.2. TYPE ELEMENT
+ *  0. GLOBAL
+ *  1. HELPERS
+ *  2. COMPONENTS
+ *    - 2.1. CARD
  */
 
 /* ==========================================================================
-   0. ELEMENT
+   0. GLOBAL
    ========================================================================== */
 
-/* 0.1. TYPE ELEMENT
-   ========================================================================== */
-
-/* 0.2. TYPE ELEMENT
-   ========================================================================== */
-
-
-/* TODO:
-  - USE CSSCOMB
-  - POSTCSS
-  - box-sizing
-*/
-
-.debug {
-  border: 1px solid blue;
-}
-
-/** {
-  margin: 0;
-}*/
-
-/*html {
-  font-size: 16px;
-}
-*/
 body {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  /*color: #29251f;*/
+  font: normal 1rem "Open Sans", arial, sans-serif;
+  color: #000;
   background: #fff;
 }
 
+/* ==========================================================================
+   1. HELPERS
+   ========================================================================== */
+
+.text-italic {
+  font-style: italic;
+}
+
+/* ==========================================================================
+   2. COMPONENTS
+   ========================================================================== */
+
+/* 2.1. CARD
+   ========================================================================== */
+
 .card {
-  border: 1px solid #ccc;
   width: 300px;
   padding: 10px;
-
-  /*box-shadow: 0 5px 5px #ccc;*/
-  box-shadow: 0 5px 5px rgba(170,170,170,0.7);
+  border: 1px solid #ccc;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+     -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-.card .title {
+.card-title {
   margin: 0;
-  font-size: 30px;
+  font-size: 1.875rem;
 }
 
-.card .picture {
+.card-picture {
   padding: 5px 0;
-  /*padding: 5px 0 5px;*/
 }
 
-.card .info {
+.card-content {
   margin: 0;
   padding: 10px;
+  font-size: 0.813rem;
   border: 1px solid #ccc;
-  font-size: 13px;
 }
 
-.card .info p {
+.card-content .card-info {
   margin: 0;
 }
 
-.card .info p:first-child {
-  font-style: italic;
-}
-
-.card .info .details {
-  list-style: none;
+.card-details {
   padding: 0;
+  list-style: none;
 }
 
-.card .info .details span {
-  font-style: normal;
-  font-weight: bold;
-}
-
-.card .info .details li {
+.card-details .item {
   font-style: italic;
+}
+
+.card-details .label {
+  font-weight: bold;
+  font-style: normal;
 }
